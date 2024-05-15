@@ -1,0 +1,298 @@
+lexicon,label,computer,pchy,doctor
+heroin,a,a,a,b
+depression,"a, b, c, d",a,d,b
+friend,a,a,a,a
+scared,"a, b, c, d",a,c,c
+life,"a, c, d",a,c,c
+mom,"a, c",a,a,a
+talk,a,a,a,a
+parent,"a, c, d",a,a,a
+sleep,"a, b, c, d",a,b,a
+help,a,a,a,a
+sad,"a, b, c, d",a,c,c
+kill,"a, c, d",a,a,d
+attempt,a,a,b,a
+need,a,a,a,a
+pain,"a, b, c, d",a,c,c
+girlfriend,"a, b, c",a,a,a
+night,a,a,a,a
+lonely,"a, c, d",a,c,c
+dad,"a, c",a,a,a
+lose,"a, d",a,d,c
+self,"a, c",a,c,a
+hope,a,a,a,a
+bad,"a, b, c, d",a,c,b
+listen,a,a,a,a
+afraid,"a, b, c, d",a,c,c
+feel,"a, c",a,a,a
+depressed,"a, b, c, d",a,d,c
+post,a,a,a,a
+illness,"a, c, d",a,d,d
+apologize,a,a,a,a
+suicidewatch,a,a,a,d
+emptiness,a,a,b,b
+diarrhea,a,a,a,a
+lithium,a,a,a,b
+survivor,a,a,a,a
+intelligent,a,a,a,a
+hug,a,a,a,a
+harm,"a, c, d",a,c,c
+cousin,a,a,a,a
+aunt,"a, b",a,a,a
+ear,a,a,a,a
+worried,"a, c",a,c,b
+darkness,a,a,b,b
+danger,a,a,b,b
+cut,"a, c, d",a,c,c
+ex,a,a,a,a
+homeless,"a, c",a,b,c
+blame,a,a,b,a
+respond,a,a,a,a
+psych,"a, d",a,d,d
+overdose,"a, c, d",a,d,d
+suicide,"a, c, d",a,d,d
+unhappy,"a, d",a,c,b
+suicidal,"a, b, c, d",a,d,d
+scar,"a, d",a,d,d
+medicate,b,b,b,b
+emotionally,b,b,c,b
+sadness,"b, c, d",b,c,c
+feeling,b,b,b,b
+prescription,b,b,b,b
+stress,"b, c",b,b,b
+desperate,b,b,b,c
+anxiety,"b, c, d",b,d,c
+depressive,"b, d",b,d,c
+mood,b,b,b,b
+funeral,b,b,b,b
+anemic,b,b,b,b
+severe,"b, c, d",b,d,d
+bipolar,"b, c, d",b,d,c
+agnostic,b,b,b,b
+shout,b,b,b,b
+concerned,b,b,b,b
+terrified,b,b,c,b
+ptsd,b,b,c,b
+overthinke,b,b,b,b
+lamictal,b,b,c,b
+stab,b,b,b,c
+backstabbe,b,b,b,b
+rant,"b, d",b,d,c
+terror,b,b,b,b
+constantly,b,b,b,b
+cancer,b,b,b,b
+gradmother,b,b,a,b
+hate,"b, c, d",b,b,b
+hurt,"b, c, d",b,b,c
+tired,"b, c, d",b,c,b
+medication,"b, c, d",b,b,c
+fear,"b, c, d",b,c,c
+boyfriend,"b, c, d",b,a,a
+anxious,"b, c, d",b,c,c
+grandmother,b,b,a,a
+upset,"b, c, d",b,c,c
+everytime,b,b,b,b
+negative,b,b,b,b
+doctor,"b, c, d",b,b,c
+depress,"b, c, d",b,c,c
+panic,"b, c",b,c,c
+symptom,"b, d",b,d,b
+med,"b, d",b,b,c
+everyday,b,b,b,b
+manic,"b, d",b,d,c
+relapse,"b, c",b,c,c
+sick,"b, c, d",b,c,c
+wage,c,c,b,b
+narcissistic,c,c,c,c
+agonizing,c,c,c,c
+nervousness,c,c,c,c
+loneliness,"c, d",c,c,c
+coward,"c, d",c,c,c
+counselling,c,c,c,c
+nausea,c,c,b,c
+clinical,c,c,c,b
+disappoint,c,c,c,c
+counselor,c,c,c,c
+emotional,c,c,c,c
+worse,c,c,b,c
+disappointment,c,c,c,c
+terrify,c,c,c,c
+relieve,c,c,c,c
+cutting,c,c,c,d
+confide,c,c,b,c
+friendless,c,c,c,c
+probation,c,c,c,c
+scarred,c,c,c,c
+psychologist,c,c,c,c
+timid,c,c,b,c
+monophobia,c,c,c,c
+depressant,"c, d",c,c,c
+awkward,c,c,b,c
+psychiatrist,"c, d",c,c,c
+mum,"c, d",c,a,b
+urge,c,c,c,c
+wreck,c,c,c,c
+scare,"c, d",c,c,c
+pathetic,"c, d",c,d,c
+abandon,c,c,c,c
+happiness,c,c,a,b
+suffer,"c, d",c,c,d
+tear,c,c,c,c
+anger,"c, d",c,c,d
+therapist,"c, d",c,c,c
+worsen,c,c,c,c
+crying,c,c,c,c
+meaningless,c,c,c,d
+abusive,"c, d",c,d,d
+stressful,c,c,c,c
+disorder,"c, d",c,c,c
+misery,"c, d",c,d,d
+selfish,"c, d",c,c,c
+therapy,"c, d",c,c,c
+pity,"c, d",c,c,c
+finally,c,c,c,c
+horrible,"c, d",c,c,c
+fucking,"c, d",c,c,c
+shit,"c, d",c,b,c
+divorce,c,c,c,c
+piss,c,c,c,b
+die,"c, d",c,c,d
+sister,"c, d",c,a,a
+antidepressant,"c, d",c,d,c
+crush,c,c,c,c
+shitty,c,c,c,c
+flirt,c,c,b,c
+abuse,c,c,c,c
+struggle,"c, d",c,c,c
+relationship,"c, d",c,c,c
+angry,"c, d",c,c,c
+worthless,"c, d",c,d,d
+father,c,c,a,a
+guilt,"c, d",c,d,c
+lie,"c, d",c,c,c
+lazy,"c, d",c,c,c
+worry,"c, d",c,c,c
+nervous,c,c,c,c
+mother,"c, d",c,a,a
+wife,c,c,a,a
+fault,"c, d",c,c,c
+awful,"c, d",c,d,c
+bed,"c, d",c,b,a
+fuck,"c, d",c,c,c
+family,c,c,b,a
+fail,"c, d",c,c,d
+dead,"c, d",c,c,d
+terrible,c,c,c,c
+break,"c, d",c,c,d
+anymore,"c, d",c,c,c
+dose,d,d,d,d
+apathetic,d,d,d,d
+headache,d,d,d,c
+drunk,d,d,d,d
+bullshit,d,d,d,d
+end,d,d,d,d
+alive,d,d,d,c
+scream,d,d,c,d
+medicine,d,d,d,c
+care,d,d,c,c
+death,d,d,d,d
+stupid,d,d,d,d
+wish,d,d,c,c
+liar,d,d,b,d
+nauseous,d,d,c,d
+shame,d,d,d,d
+jealous,d,d,d,d
+ruin,d,d,d,d
+stop,d,d,d,d
+sorry,d,d,d,d
+badly,d,d,d,d
+sleepiness,d,d,d,c
+lexapro,d,d,d,c
+procrastination,d,d,d,d
+unhappiness,d,d,d,c
+counsellor,d,d,c,c
+wake,d,d,a,c
+violent,d,d,d,d
+motivation,d,d,b,c
+fall,d,d,d,d
+disappear,d,d,d,d
+mess,d,d,d,d
+screw,d,d,d,d
+semester,d,d,a,d
+toll,d,d,d,d
+unemployed,d,d,d,c
+hospitalization,d,d,d,d
+pill,d,d,d,c
+goodbye,d,d,d,d
+disease,d,d,d,c
+diagnose,d,d,d,c
+hospital,d,d,d,c
+breakup,d,d,d,d
+failure,d,d,d,d
+mg,d,d,c,c
+loathing,d,d,d,d
+relief,d,d,d,d
+mental,d,d,d,c
+agony,d,d,d,d
+hopeless,d,d,d,d
+trauma,d,d,d,d
+benzo,d,d,d,c
+psychiatric,d,d,d,c
+bleed,d,d,d,d
+schizophrenic,d,d,d,c
+schizophrenia,d,d,d,c
+delusional,d,d,d,d
+delusion,d,d,d,d
+psychotic,d,d,d,d
+slit,d,d,d,d
+debilitate,d,d,d,d
+hospitalize,d,d,d,d
+bpd,d,d,d,d
+exhausting,d,d,d,d
+antipsychotic,d,d,d,d
+torment,d,d,d,d
+psychosis,d,d,d,d
+suffering,d,d,d,d
+cowardly,d,d,d,d
+impulsive,d,d,d,d
+sufferer,d,d,d,d
+symptomatic,d,d,d,d
+xanax,d,d,d,c
+dbt,d,d,d,c
+suffocate,d,d,d,d
+miserable,d,d,d,d
+inpatient,d,d,d,d
+diagnosis,d,d,d,c
+burden,d,d,d,d
+appointment,d,d,c,c
+demon,d,d,a,d
+guilty,d,d,d,d
+ugly,d,d,c,d
+bleak,d,d,d,d
+exhausted,d,d,d,d
+nightmare,d,d,d,c
+unbearable,d,d,d,d
+addiction,d,d,d,d
+useless,d,d,d,d
+ashamed,d,d,d,d
+scary,d,d,d,d
+proud,d,d,b,d
+outpatient,d,d,d,c
+resent,d,d,d,c
+grandparent,d,d,a,b
+torture,d,d,d,d
+niece,d,d,a,b
+bully,d,d,d,d
+disgusting,d,d,d,d
+pointless,d,d,d,d
+panicked,d,d,d,d
+autism,d,d,c,b
+whisper,d,d,a,b
+asleep,d,d,b,d
+numb,d,d,d,d
+terrifying,d,d,d,d
+hallucination,d,d,d,d
+dread,d,d,d,d
+regret,d,d,d,d
+despair,d,d,d,d
+painfully,d,d,d,d
