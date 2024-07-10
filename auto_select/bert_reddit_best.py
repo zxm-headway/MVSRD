@@ -58,6 +58,7 @@ def parse_args(args=None):
     parser.add_argument("--epochs", default=50, type=int)
     parser.add_argument("--seed", default=24, type=int)
     parser.add_argument("--classnum", default=5, type=int)
+    parser.add_argument("--use_pretrain", default=True, type=bool)
     return parser.parse_args(args)
 
 
@@ -74,7 +75,7 @@ class RedditDataset(Dataset):
 
     def __getitem__(self, item):
         labels = torch.tensor(self.labels['labels'].iloc[item], dtype=torch.long)
-        feature = torch.tensor(self.labels.iloc[item,:-1],dtype=torch.float32)
+        feature = torch.tensor(self.labels.iloc[item,:-1].values,dtype=torch.float32)
         if self.days > len(self.tweets[item]):
             tweets = torch.tensor(self.tweets[item], dtype=torch.float32)
         else:
@@ -176,15 +177,9 @@ class SelfAttention(nn.Module):
         keys = torch.bmm(inputs, self.W_key.unsqueeze(0).expand(inputs.size(0), *self.W_key.size()))
         queries = torch.bmm(inputs, self.W_query.unsqueeze(0).expand(inputs.size(0), *self.W_query.size()))
         values = torch.bmm(inputs, self.W_value.unsqueeze(0).expand(inputs.size(0), *self.W_value.size()))
-        # print(queries.shape,keys.shape,values.shape)
-        # print(querys.shape,keys.shape,values.shape)
         attn_scores = torch.bmm(queries, keys.transpose(1, 2))
-        # Scale scores by square root of dimensionality of key/query vectors
         attn_scores = attn_scores / (self.hidden_size ** 0.5)
-        # Softmax to get attention weights
         attentions= torch.softmax(attn_scores, dim=-1)
-        # print(attentions.shape)
-        # Apply the attention weights to the values to get the weighted sum
         weighted = torch.bmm(attentions, values)
         return weighted
 
@@ -241,11 +236,6 @@ class MyLSTMATT(nn.Module):
         engine_feature = self.controller(engine_feature)
         # 将bert_feature与engine_feature进行拼接
         all_feature = torch.cat((bert_feature,engine_feature),dim=1)
-
-
-        # all_feature = F.relu(all_feature)
-        # all_feature = self.dropout(all_feature)
-
         all_feature = self.dropout(all_feature)
 
         feat = self.fc_1(all_feature)
@@ -321,26 +311,32 @@ def train(args):
     optimizer = AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     # optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     best_f1 = 0
-    for epoch in range(args.epochs):
-        model.train()
-        total_loss = 0
-        for i, (labels, tweets, lengths,features) in enumerate(tqdm(train_loader)):
-            
 
-            # unique, counts = np.unique(labels, return_counts=True)
-            # class_counts = dict(zip(unique, counts))
-            # print("Train class counts:", class_counts)
+    
+    if args.use_pretrain:
+        print("Using pre-trained model")
+        model.load_state_dict(torch.load('best_model.pth'))
+    else:
+        for epoch in range(args.epochs):
+            model.train()
+            total_loss = 0
+            for i, (labels, tweets, lengths,features) in enumerate(tqdm(train_loader)):
+                
 
-            labels = labels.cuda()
-            tweets = tweets.cuda()
-            features = features.cuda()
-            optimizer.zero_grad()
-            outputs = model(tweets, lengths, labels,features)
-            loss = utils.loss_function(outputs, labels, loss_type='ce', expt_type=args.classnum, scale=2)
-            loss.backward()
-            optimizer.step()
-            total_loss += loss.item()
-        # print(f"Epoch {epoch} Loss: {total_loss}")
+                # unique, counts = np.unique(labels, return_counts=True)
+                # class_counts = dict(zip(unique, counts))
+                # print("Train class counts:", class_counts)
+
+                labels = labels.cuda()
+                tweets = tweets.cuda()
+                features = features.cuda()
+                optimizer.zero_grad()
+                outputs = model(tweets, lengths, labels,features)
+                loss = utils.loss_function(outputs, labels, loss_type='ce', expt_type=args.classnum, scale=2)
+                loss.backward()
+                optimizer.step()
+                total_loss += loss.item()
+            # print(f"Epoch {epoch} Loss: {total_loss}")
         model.eval()
         val_preds = []
         val_labels = []
